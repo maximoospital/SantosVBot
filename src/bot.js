@@ -1,4 +1,4 @@
-const Twit = require("twitter");
+const Twitter = require("twitter");
 const config = require("./config");
 const TwitterBot = new Twitter(config);
 
