@@ -6,7 +6,7 @@ const client = new TwitterApi(config);
 console.log("Tweeting...")
 const retweet = async () => {
 
-  const mediaId = await client.v1.uploadMedia('test.jpg');
+  const mediaId = await client.v1.uploadMedia('./test.jpg');
   const createdTweet = await client.v2.tweet('Hello!', { media_ids: mediaId });
   console.log('Tweet', createdTweet.id, ':', createdTweet.text);
 
