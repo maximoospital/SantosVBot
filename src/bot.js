@@ -5,10 +5,11 @@ const TwitterBot = new TwitterApi(config);
 // API
 console.log("Tweeting...")
 const retweet = async () => {
-  const { data: createdTweet } = await TwitterBot.v2.tweet('Test!', {
-    poll: { duration_minutes: 120, options: ['Test 1', 'Test 2!'] },
-  });
+
+  const mediaId = await client.v1.uploadMedia('test.jpg');
+  const createdTweet = await client.v2.tweet('Hello!', { media_ids: mediaId });
   console.log('Tweet', createdTweet.id, ':', createdTweet.text);
+  
 };
 
 retweet();
