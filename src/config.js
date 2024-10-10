@@ -8,8 +8,9 @@
 require("dotenv").config();
 
 module.exports = {
-  consumer_key: process.env.CONSUMER_TOKEN,
-  consumer_secret: process.env.CONSUMER_TOKEN_SECRET,
-  access_token_key: process.env.ACCESS_TOKEN,
-  access_token_secret: process.env.ACCESS_TOKEN_SECRET,
+  appKey: process.env.CONSUMER_TOKEN,
+  appSecret: process.env.CONSUMER_TOKEN_SECRET,
+  accessToken: process.env.ACCESS_TOKEN,
+  accessSecret: process.env.ACCESS_TOKEN_SECRET,
 };
+
