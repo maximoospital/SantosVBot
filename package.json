@@ -1,5 +1,14 @@
 {
+  "name": "SantosVBot",
+  "private": "true",
+  "version": "0.1.0",
+  "description": "Twitter bot that scrapes stories from SantosVargas's ig",
+  "main": "index.js",
+  "repository": "https://github.com/maxmoospital/SantosVBot",
+  "author": "Maximo Ospital",
+  "license": "MIT",
   "dependencies": {
+    "dotenv": "^10.0.0",
     "twitter": "^1.7.1"
   }
 }

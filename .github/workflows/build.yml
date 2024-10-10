@@ -1,9 +1,9 @@
-name: Tweet
+name: Tweet Image
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/30 * * * *' # Runs Bot every 30 minutes
+    - cron: "*/2 * * * *" # Runs Bot every 30 minutes
 
 jobs:
   build:
@@ -13,11 +13,11 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '12.x'
-      - name: Twitter Bot Action
+          node-version: "12.x"
+      - name: Run Bot
         uses: dephraiim/twitter-bot-action@v1.2.1
         env:
-          CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
-          CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+          BOT_CONSUMER_KEY: ${{ secrets.BOT_CONSUMER_KEY }}
+          BOT_CONSUMER_SECRET: ${{ secrets.BOT_CONSUMER_SECRET }}
+          BOT_ACCESS_TOKEN: ${{ secrets.BOT_ACCESS_TOKEN }}
+          BOT_ACCESS_TOKEN_SECRET: ${{ secrets.BOT_ACCESS_TOKEN_SECRET }}
