@@ -13,5 +13,3 @@ module.exports = {
   access_token_key: process.env.ACCESS_TOKEN,
   access_token_secret: process.env.ACCESS_TOKEN_SECRET,
 };
-
-console.log(module.exports);
