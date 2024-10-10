@@ -6,9 +6,10 @@ const TwitterBot = new Twitter(config);
 console.log("Tweeting...")
 const retweet = () => {
   TwitterBot.post('statuses/update', {status: 'Test tweet'}, function(error, tweet, response) {
-    console.log(response);
     if (!error) {
       console.log(tweet);
+    } else {
+      console.log(error);
     }
   });
 };
